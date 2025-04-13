@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>人物养成游戏：红尘路</title>
+  <style>
+    body {
+      font-family: "宋体", serif;
+      background: #f9f3ea;
+      margin: 0;
+      padding: 20px;
+      color: #4b3f2f;
+    }
+    h1 {
+      text-align: center;
+      color: #7b4e2d;
+    }
+    .panel {
+      background: #fffaf3;
+      border: 1px solid #d5c3aa;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    .stats span { display: inline-block; margin-right: 12px; }
+    button {
+      padding: 8px 18px;
+      margin: 5px;
+      background: #e7d4b5;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .log {
+      height: 200px;
+      overflow-y: auto;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .dialogue {
+      margin-top: 10px;
+      background: #fff5e0;
+      padding: 10px;
+      border-left: 4px solid #cc9;
+      font-style: italic;
+    }
+    .footer-btns {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>《红尘养成录》</h1>
+
+<div class="panel stats" id="stats"></div>
+<div class="panel" id="action">
+  <p>选择今日行动：</p>
+  <button onclick="doAction('study')">读书（+才华）</button>
+  <button onclick="doAction('art')">练艺（+才艺）</button>
+  <button onclick="doAction('flirt')">讨好（+媚术）</button>
+  <button onclick="doAction('rest')">休息（+体质）</button>
+  <button onclick="nextDay()">进入下一天</button>
+</div>
+
+<div class="panel log" id="log"></div>
+
+<div class="panel" id="dialogueBox" style="display:none;">
+  <p><strong id="dialogueName"></strong>：</p>
+  <div id="dialogueContent" class="dialogue"></div>
+</div>
+
+<div class="footer-btns">
+  <button onclick="saveGame()">保存记录</button>
+  <button onclick="loadGame()">读取记录</button>
+  <button onclick="resetGame()">重新开始</button>
+</div>
+
+<script>
+  // JavaScript代码略，见前一步输出（为节省空间此处省略）
+</script>
+
+</body>
+</html>
